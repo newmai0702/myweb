@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head> 
+    <title>Animation</title> 
+    <style>
+@keyframes zoomout {
+    from {transform: scale(2); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
+}
+
+@keyframes comefromright {
+    from {margin-left: 900px;}
+    to {margin-left: 0px;}
+}
+
+@keyframes fadeout {
+    from {opacity: 0; transform: scale(1.5);}
+    to {opacity: 0.99;}
+}
+
+@keyframes blink {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes move {
+    from {margin-left: -100px;}
+    to {margin-left: 100px;}
+}
+
+@keyframes showad {
+    6% {background-image: url("photo/gif1.gif");}
+    12% {background-image: url("photo/gif2.gif");}
+    18% {background-image: url("photo/gif3.gif");}
+    24% {background-image: url("photo/gif4.gif");}
+    28% {background-image: url("photo/gif5.gif");}
+    36% {background-image: url("photo/gif6.gif");}
+    42% {background-image: url("photo/gif7.gif");}
+    48% {background-image: url("photo/gif8.gif");}
+    54% {background-image: url("photo/gif9.gif");}
+    60% {background-image: url("photo/gif10.gif");}
+    66% {background-image: url("photo/gif11.gif");}
+    72% {background-image: url("photo/gif12.gif");}
+    78% {background-image: url("photo/gif13.gif");}
+    84% {background-image: url("photo/gif14.gif");}
+    90% {background-image: url("photo/gif15.gif");}
+    96% {background-image: url("photo/gif16.gif");}
+    100% {background-image: url("photo/gif17.gif");}
+}
+
+@keyframes multicolor {
+    6% {color: red;}
+    12% {color: blue;}
+    18% {color: darkred;}
+    24% {color: yellow;}
+    28% {color: pink;}
+    36% {color: green;}
+    42% {color: purple;}
+    48% {color: darkgreen;}
+    54% {color: crimson;}
+    60% {color: brown;}
+    66% {color: orange;}
+    72% {color: navy;}
+    78% {color: chocolate;}
+    84% {color: lime;}
+    90% {color: teal;}
+    96% {color: gold;}
+    100% {color: magenta;}
+}
+
+#heading1 {
+    color: brown;
+    font-family: "Arial Black";
+    font-size: 40px;
+    transition: 2s;
+    animation: zoomout 1s ease-in;
+}
+
+#tophead {
+    margin-left: 0px;
+    height: 100px;
+    transition: 0.50s;
+    animation: comefromright 2s ease-out;
+}
+
+p {
+    transition: 2s;
+    animation: fadeout 2s ease-in-out;
+}
+
+#myheading {
+    color: teal;
+    display: block;
+    width: 250px;
+    animation: blink 0.50s ease-in infinite alternate;
+}
+
+#myheading1 {
+    color: red;
+    background: white;
+    width: 600px;
+    display: block;
+    animation: move 8s linear infinite;
+}
+
+#banner {
+    width: 800px;
+    height: 360px;
+    box-shadow: 0px 0px 20px black;
+    margin: auto;
+    background-size: 100% 100%;
+    animation: showad 30s infinite;
+    border-radius: 10px;
+}
+
+#topad { 
+    color: red;
+    background: white;
+    font-size: 20px;
+    text-align: center;
+    font-family: Helvetica;
+    text-transform: uppercase;
+    animation: multicolor 30s infinite;
+    border-radius: 10px;
+} 
+
+    </style>
+</head>
+<body style="background-color: pink;">
+
+<div id="heading1">
+    <h1>ZOOMOUT ANIMATION</h1>
+</div>
+
+<div id="tophead">
+    <h1>COME FROM RIGHT ANIMATION</h1>
+</div>
+
+
+<hr/>
+
+<h1><u>FADE OUT ANIMATION</u></h1>
+<p>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+</p>
+
+<hr/>
+
+<div id="myheading">
+    <h1>BLINK ANIMATION</h1>
+</div>
+
+<div id="myheading1">
+    <h3>MOVE ANIMATION:- Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the </h3>
+</div>
+
+<div id="banner">
+    <div id="topad"><b>GIF ANIMATION</b></div>
+</div>
