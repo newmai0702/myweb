@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <img id ="pic" src="images/p2.jpg" style="transition:0.50s;width:50px;height:50px;box-shadow:10px 10px 10px gray">
+        <br/>
+        <input id="slider" type="range" max="5"min="1" style="position:absolute">
+<script>
+    var s = document.getElementById("slider")
+    var p = document.getElementById("pic")
+    s.onchange = function()
+    {
+        document.title = this.Value
+        p.style.transform = `scale(${s.value})`
+    }
+    document.title = "Ready"
+
+</script>
+    
+    
+</body>
+</html>

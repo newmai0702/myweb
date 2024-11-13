@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        transition:0.50s;
+    }
+    .mystyle
+    {
+        color:teal;
+        box-shadow:10px 10px 10px gray;
+
+    }
+    p
+    {
+        opacity:0.4;
+    }
+</style>
+
+
+
+<body>
+    <h1 id="about">About us</h1>
+    <img src="images/p8.jpg">
+    <p>
+       <h1> Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, incidunt? Pariatur ipsa illum tempora. Dolorem dolorum asperiores molestiae unde delectus eveniet, nobis velit repellendus at dicta quia sunt similique ipsa.
+        Hic deserunt corporis blanditiis eveniet repellat culpa rem, omnis optio similique doloribus sit ad illum ducimus laudantium quam qui eum! Error quisquam labore eius at dignissimos ipsa similique quidem expedita.Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, incidunt? Pariatur ipsa illum tempora. Dolorem dolorum asperiores molestiae unde delectus eveniet, nobis velit repellendus at dicta quia sunt similique ipsa.
+        Hic deserunt corporis blanditiis eveniet repellat culpa rem, omnis optio similique doloribus sit ad illum ducimus laudantium quam qui eum! Error quisquam labore eius at dignissimos ipsa similique quidem expedita.Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, incidunt? Pariatur ipsa illum tempora. Dolorem dolorum asperiores molestiae unde delectus eveniet, nobis velit repellendus at dicta quia sunt similique ipsa.
+        Hic deserunt corporis blanditiis eveniet repellat culpa rem, omnis optio similique doloribus sit ad illum ducimus laudantium quam qui eum! Error quisquam labore eius at dignissimos ipsa similique quidem expedita.Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, incidunt? Pariatur ipsa illum tempora. Dolorem dolorum asperiores molestiae unde delectus eveniet, nobis velit repellendus at dicta quia sunt similique ipsa.
+        Hic deserunt corporis blanditiis eveniet repellat culpa rem, omnis optio similique doloribus sit ad illum ducimus laudantium quam qui eum! Error quisquam labore eius at dignissimos ipsa similique quidem expedita.</h1>
+        </p>
+
+    <script>
+        var myhead = document.getElementById("about")
+        myhead.style="text-align:center;width:200px;"
+        myhead.style.background="green"
+        myhead.style.padding="20px"
+
+        myhead.onclick = function()
+        {
+            myhead.style.background="black"
+            myhead.style.cursor ="pointer"
+            myhead.className="mystyle"
+        }
+        myhead.onmouseout = function()
+        {
+            myhead.style.background="green"
+            myhead.classlist.remove("mystyle")
+        }
+        /* searching dom element By querySelector Method */
+
+        const allptag = document.querySelectorAll("P")
+        const image = document.querySelectorAll("img")
+        
+        image[0].onmouseover = function()
+        {
+            image[0].style.transform="scale(1.10)"
+        }
+        image[0].onmouseout = function()
+        {
+        this.style.tranform="scale(1)"
+        }
+
+        allptag[0].style.cursor="pointer"
+        allptag[1].style.color="red"
+        allptag[2].style.color="green"
+        allptag[3].style.color="blue"
+
+        allptag[0].onmouseover = function()
+        {
+         allptag[0].style.opacity="1"  
+         allptag[0].style.transform="scale(1.10)" 
+        }
+        allptag[0].onmouseout = function()
+        {
+            allptag[0].style.opacity="0.4"
+            allptag[0].style.transform="scale(1)"
+        }
+        allptag[1].onmouseover = function()
+        {
+            this.style="padding:30px;color:white;opacity:1;cursor:pointer;background:black"
+        }
+        allptag[1].onmouseout = function()
+        {
+            this.style="color:red;opacity:0.4;cursor:pointer;background:"
+        }
+        allptag[2].onmouseover = function()
+        {
+            this.style="padding:30px;color:black;opacity:1;cursor:pointer;background:url(images/p1.jpg)"
+        }
+        allptag[3].onclick = function()
+        {
+            this.style="transition:3s;padding:30px;color:black;opacity:1;cursor:pointer;background:url(images/p2.jpg)"
+        }
+        allptag[3].onmouseout = function()
+        {
+            this.style="transition:3s;padding:30px;color:black;opacity:1;cursor:pointer;"
+        }
+
+
+    
+
+        document.title= "JavaScript"   
+    </script>
+</body>
+</html>

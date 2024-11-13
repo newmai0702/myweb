@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="show_add()">
+    <script>
+        var box
+        // Udf :-- User Defind function /
+        function show_add()
+        {
+
+            box = document.createElement
+            ("div")
+            document.body.appendChild(box)
+
+            //box.style="width:300px;border:1px black solid;padding:20px"text-align:center;
+            border-radius:20px;box-shadow:10px 10px 10px;position:absolute;left:40%"
+
+            //box.innerHTML ="<div
+            style='text-align:right'><buttononclick='closedilog()'>x</button></div>"
+
+            box.innerHTML+="img src='images/images.png'  >"
+            
+
+        }
+
+
+        function closedilog()
+        {
+            document.body.removeChild(box)
+        
+        }
+        setTimeout("closedilog()","1000")
+        document.title = "Ready"
+
+    </script>
+</body>
+</html>
