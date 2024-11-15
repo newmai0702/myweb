@@ -1,0 +1,289 @@
+<!doctype html>
+<head><title></title>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'poppins',sans-serif;
+text-decoration:none;
+list:style:none;
+}
+.header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:35px 12%;
+background:black;
+backdrop-filter:blur(10px);
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:100;
+}
+.logo{
+font-size:25px;
+color:white;
+font-weight:600;
+transition:0.3s ease;
+}
+.logo:hover{
+color:orangered;
+text-shadow:0 0 25px orangered,
+            0 0 50px orangered;
+transform:scale(1.1);
+}
+span{
+color:orangered;
+}
+.navbar a{
+font-size:18px;
+color:white;
+font-weight:500;
+margin:0 20px;
+border-buttom:3px solid transparent;
+transition:0.3s ease;
+}
+.navbar a:hover,
+.navbar a:active{
+color:orangered;
+border-buttom:3px solid orangered;
+}
+.contact{
+padding:10px 28px;
+background-color:white;
+color:black;
+border:2px solid transparent;
+border-radius:8px;
+font-size:16px;
+letter-spacing:1px;
+font-weight:600;
+transition:0.3s ease;
+}
+.contact:hover{
+background-color:orangered;
+box-shadow:0 0 25px orangered;
+color:white;
+}
+.home{
+width:100%;
+min-height:100vh;
+background:rgb(241, 241, 241);
+display:flex;
+align-items:center;
+gap:7em
+padding:30px 12% 0;
+}
+.home.content{
+max-width:800px;
+}
+.home.content h3{
+font-size:42px;
+}
+.home.content h1{
+font-size:62px;
+line-height:1.2;
+}
+.home-content p{
+font-size:18px;
+margin:25px 0 30px;
+}
+
+.img-box img{
+border-radius:50%;
+width:550px;
+}
+::-webkit-scrollbar{
+width:15px;
+}
+::-webkit-scrollbar-thumb{
+background-color:orangered;
+}
+::-webkit-scrollbar-track{
+background-color:rgba(0,0,0,0.6);
+width:50px;
+}
+.about{
+display:flex;
+justify-content:center;
+align-items:center;
+padding:12% 8%;
+gap:10em;
+background:black;
+}
+.about-img img{
+position:relative;
+width:550px;
+box-shadow:0 0 25px orangered;
+           0 0 50px orangered;
+border-radius:50%;
+}
+.about-content h2{
+text-align:left;
+color:white;
+font-size:42px;
+}
+.about-content h3{
+font-size:62px;
+color:white;
+}
+.about-content p{
+color:white;
+font-size:20px;
+margin:2em 0 3em;
+}
+.contact-form h2{
+text-align:center;
+margin-top:3em;
+margin-buttom:1em;
+font-size:36px;
+}
+.contact-form form{
+max-width:50em;
+margin:1rem auto;
+text-align:center;
+margin-buttom:3em;
+}
+.contact-form form .input-box{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+}
+.contact-form form.input-box input,
+.contact-form form textarea{
+width:100%;
+padding:1.5em;
+font-size:18px;
+color:black;
+background:rgb(241, 241, 241);
+border-radius: .8rem;
+margin:1rem 0;
+resize:none;
+}
+
+
+
+</style>
+
+</head>
+<body>
+<header class="header">
+<a href ="#" class="logo"><span>New</span>mai</a>
+<nav class="navbar">
+<a href="graphics work.html">Graphic</a>
+<a href="html(prac.).html">Html(prac.)</a>
+<a href="java script/index.html">Javascript</a>
+<a href="behance">Behance</a>
+<a href="website">Website</a>
+
+</nav>
+<a href="#" class="contact">Contact Me</a>
+</header>
+
+<section class="home">
+<div class="home-content">
+<h3>Hi</h3>
+<h1>I'm <span> Wimasimliu Newmai<br></span>Graphic Designer</h1>
+<p> Hey! I'm Wimasimliu Niumai ,currently a junior at Arena Animation ,GTB Nagar pursuing a diploma in graphic and web design.My studies have equipped me with a strong foundation in visual communication ,and i am proficient in tools such as Adobe Photoshop, Illustrator,Corel draw, and Indesign.
+I am  particularly passionate about user-centered design and enjoy exploring how design can enhance user experience and solve problems. My goal is to become a versatile designer who can adapt to various creative challenges and contribute to impactful projects.
+Outside of my studies ,i love sketching and staying updated with design trends, which fuels my creativity and help me bring fresh ideas to my work.</p>
+
+
+</div>
+<div class="img-box">
+<img src="pic.jpg" alt="">
+</div> 
+</section>
+
+<section class="about">
+<div class="about-img">
+<img src="pic.jpg" alt="">
+</div>
+<div class="about-content">
+<h2 class="heading">About <span> Me</span></h2>
+<h3>Graphic <span> Designer</span></h3>
+<p> Hey! I'm Wimasimliu Niumai ,currently a junior at Arena Animation ,GTB Nagar pursuing a diploma in graphic and web design.My studies have equipped me with a strong foundation in visual communication ,and i am proficient in tools such as Adobe Photoshop, Illustrator,Corel draw, and Indesign.
+I am  particularly passionate about user-centered design and enjoy exploring how design can enhance user experience and solve problems. My goal is to become a versatile designer who can adapt to various creative challenges and contribute to impactful projects.
+Outside of my studies ,i love sketching and staying updated with design trends, which fuels my creativity and help me bring fresh ideas to my work.</p>
+
+</div>
+</section>
+
+<section class="contact-form">
+<h2 class="contact-me">Contact <span> Me</span></h2>
+<form action="#">
+<div class="input-box">
+<input type="text"placeholder="Full Name">
+<input type="email"placeholder="Email">
+</div>
+<div class="input-box">
+<input type="number"placeholder="Phone Number">
+<input type="text"placeholder="Subject">
+</div>
+<textarea name=""id=""cols="30"
+rows="10" placeholder="Your Message"></textarea>
+<input type="submit"value="Send Message"
+class="btn-1">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
