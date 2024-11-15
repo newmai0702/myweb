@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head><title>Registration Form</title>
+</head>
+<style>
+#main
+{
+width:50%;
+margin:auto;
+background:
+}
+
+table
+{
+width:100%;
+}
+
+td{width:50%;}
+input[type=text]{width:100%;}
+input[type=password]{width:100%;}
+
+</style>
+
+<body>
+
+<div id="main">
+
+<table border="0" cellpadding="2%">
+<caption>Registration  Form</caption>
+
+<form action="http://tataplay/user/get.php" method="get">
+
+<tr>
+<td><label for="username">User Name</lable></td><td><input placeholder="User Name" id="username"
+type="text"pattern="[A-Za-z]" title="Enter name here"></td>
+</tr>
+
+<tr>
+<td><label for="password">User Password</label></td><td><input Placeholder="Type password here..."
+id="password"type="password"required></td>
+</tr>
+
+<tr>
+<td><label for="age">User Age</label></td><td><input id="age"type="Number"max="30"Min="15"
+</tr>
+
+<tr>
+<td><label for="message">Message</label></td><td><textarea placeholder="type Feed back here....."
+rows="10" cols="50"></textarea></td>
+</tr>
+<tr>
+<td><label for="gender">Gender</label></td>
+<td name="gender">
+Male <input type="radio" value="Male" name="gender">
+Female <input type="radio" value="Female" name="gender"checked>
+Other <input type="radio" value="other" name="gender">
+</td>
+</tr>
+<tr>
+<td><label for="hobby">Hobby</label></td>
+<td>
+Reading <input type="checkbox"value="Reading">
+Reading <input type="checkbox"value="Dancing">
+Reading <input type="checkbox"value="Cooking" checked>
+Reading <input type="checkbox"value="writing">
+</td>
+</tr>
+<tr>
+<td><label for="country">Country</label></td>
+<td>
+<select>
+<option value="">Select your Country</option>
+<option value="india">India</option>
+<option value="usa">USA</option>
+<option value="russia">Russia</option>
+<option value="UK">UK</option>
+<option value="Japan">Japan</option>
+</select>
+</td>
+</tr>
+<tr>
+<td><label for="city">City</label></td>
+<td>
+<input list="city"id="city"name="city"/>
+<datalist>
+<option value="Agra"></option>
+<option value="Mumbai"></option>
+<option value="Chennai"></option>
+<option value="Lucknow"></option>
+<option value="Jaipur"></option>
+<option value="Surat"></option>
+<option value="Patna"></option>
+<option value="Pune"></option>
+<option value="Kanpur"></option>
+</datalist>
+</td>
+</tr>
+<tr>
+<td><label for="dob">Dob</label></td>
+<td>
+<input type="date">
+</td>
+</tr>
+<tr>
+<td><label for="Time">Time</label></td>
+<td>
+<input type="time">
+</td>
+</tr>
+<tr>
+<td><label for="Theme color">Theme color</label></td>
+<td>
+<input type="color">
+</td>
+</tr>
+<tr>
+<td><label for="File">File To upload</label></td>
+<td>
+<input type="file">
+</td>
+</tr>
+<tr>
+<td></td><td><input type="submit"value="Register"><input type="reset"></td>
+</tr>
+</div>
+</body>
+</form>
+</table>
+</html>
+ 
