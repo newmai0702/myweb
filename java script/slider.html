@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #tool
+    {
+        //background:red;
+       width:700px;
+    }
+    #mycolor, #mycolor2
+    {
+       // width:3%;
+       // height:20px;
+       // border-radius:100px;
+
+    }
+    p{font-size:15px;
+        font-family:verdana;
+        padding:10px;
+    }
+    #tool
+    {
+        margin:100px;
+        top:-50px;
+        position:fixed;
+    }
+</style>
+
+<body>
+
+    <h1>Using Slider (or Range Tag) By js</h1>
+    <div id="tool">
+    <input id="slider1" type="range" max="50" min="15" value="15">
+    <input type="color" id="mycolor">
+    <input type="color" id="mycolor2">
+    </div>
+    <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ratione odio eos exercitationem. Rem, excepturi error odit sed doloribus eos sunt fugiat optio culpa minus, dolorem, debitis voluptatibus reprehenderit ab?
+    Dolore ut consectetur earum at veniam. Debitis quibusdam ipsa sequi at nobis dolor voluptatem libero rerum. Saepe numquam earum ab, aliquid quia voluptate, dolorum quae iure ea maiores unde dolorem.
+    Fugit tempore sint, officia unde consequatur possimus nesciunt, enim facere recusandae iste quos modi. Incidunt, voluptas reiciendis dignissimos dolorem earum commodi odio architecto eaque ipsa ullam ad placeat aut expedita.
+    Eos quas nemo blanditiis cum, veritatis culpa voluptate saepe eius molestiae consequuntur libero. Ullam fuga dolore aspernatur earum adipisci ab nisi laborum, odio quasi molestias reiciendis nobis ea iusto amet.
+    Architecto fuga accusamus facere? Cumque tempora, minima cupiditate obcaecati sint assumenda magnam nisi velit voluptate odio exercitationem. Provident et magnam at recusandae eveniet aliquid atque magni. Explicabo, deleniti? Molestiae, cumque.
+    Ducimus obcaecati fugiat similique, quidem veritatis non eum aut optio quis est quisquam nostrum quo atque voluptates harum eius at dignissimos officiis sapiente, aspernatur cupiditate perspiciatis aliquam commodi. Aspernatur, corrupti.
+
+    </p>
+    <script>
+    var s1 = document.getElementById("slider1")
+    var c = document.getElementById("mycolor")
+    var b = document.getElementById("mycolor2")
+
+    var t = document.getElementById("text")
+    document.title = "No Error";
+    s1.onchange = function()
+    {
+        t.style.fontSize= s1.value+"px"
+    }
+    c.onchange = function()
+    {
+        t.style.color= c.value
+    }
+    b.onchange = function()
+    {
+        document.body.style.background = b.value
+    }
+
+    
+
+    
+
+    </script>
+</body>
+</html>
