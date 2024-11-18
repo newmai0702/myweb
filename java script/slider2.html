@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #pic
+    {
+        width:400px;
+        height:400px;
+        box-shadow:10px 10px 10px gray;
+        display:block;
+        margin:auto;
+    }
+</style>
+<body>
+    <img src="images/p7.jpg" id="pic">
+    <input type="range" min="0" max="5" id="slider">
+    <script>
+        // Creating Array in js 
+        /*
+      what is array:- collection of related variable i,e in JavaScript array is an object (class),
+      used to create large no variable by a single command 
+      eg:
+      index Array = var uname = new Array(3) // Creating Instance with five variable 
+      uname[0]="ravi"
+      uname[1]="rishi"
+      uname[2]="amit"
+      or 
+      object array = var uname = ["ravi","rishi","amit"]
+      
+      alert(uname[2])
+      */
+
+      var mycolor = ["red","blue","green","orange","teal","brown"]
+      //alert(mycolor[3])
+     // document.bgColor = mycolor[4]
+      //alert(mycolor.length)
+
+      var plist = ["p1.jpg","p2.jpg","p3.jpg","p4.jpg","sunset.jpg","valley.jpg"]
+      var p = document.getElementById("pic")
+      var s = document.getElementById("myslider")
+      s.onchange = function()
+      {
+        p.src="images/"+plist[s.value]
+      }
+      
+
+    </script>
+</body>
+</html>
