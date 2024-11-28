@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mybox"></div>
+    <buttom onclick="stopclock()">Stop Time</buttom>
+    <buttom onclick="startclock()">Start Time</buttom>
+    
+    <script>
+        var clock = document.getElementById("mybox") 
+        document.bgcolor = "yellow"
+        clock.style = "box-shadow:10px 10px gray;text-align:center;"
+        clock.style.width = "600px"
+        clock.style.height = "100px"
+        clock.style.background = "green"
+        clock.style.color ="white"
+        clock.style.fontsize = "60px"
+        var d
+        //alert("hello")
+        function show()
+        {
+            d = new Date()
+            clock.innerHTML = d.toLocaleDateString()
+
+        }
+        var t = setInterval("show()",1000)
+        function stopclock()
+        {
+            clearInterval(t)
+
+        }
+        function startclock()
+        {
+            t = setInterval("show()",1000)
+        
+        }
+        document.title ="Ready"
+        </script>
+</body>
+</html>

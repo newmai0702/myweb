@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        #mydate
+        {
+            font-size:50px;
+            font-family:Arial black;
+            color:rgb(234, 27,27);
+            text-shadow:10px,10px,10px gray;
+
+        }
+    </style>
+<body>
+    <h1>Working with Date object in js</h1>
+    <div id="mydate">Date Today</div>
+    <button onclick="stoptime()">Stop Time</button>
+    <button onclick="starttime()">Start Time</button>
+
+    <script>
+        var md = document.getElementById("mydate")
+        var d,t
+        function showdate()
+        {
+            d = new Date()
+            mydate.innerHTML = d.toTimeString()
+            document.title = d
+        }
+        function starttime()
+        {
+            t = setInterval("showdate()",1000)
+        }
+        function stoptime()
+        {
+            alert("clock will stop now")
+            clearInterval(t)
+        }
+    </script>
+</body>
+
+</html>
