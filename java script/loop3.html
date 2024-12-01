@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .pic
+    {
+        margin:40px;
+        cursor:pointer;
+        width:100px;
+        height:100px;
+        padding:5px;
+        box-shadow:10px 10px 10px gray;
+        background:black;
+        transition:0.50s
+    }
+    .pic:hover
+    {
+        transform:scale(1.20)
+    }
+</style>
+<body>
+    <script>
+        //for loop
+        //syntax
+        var plist =["p4.jpg","p1.jpg","gif1.gif","gif3.gif"]
+
+        for(var i = 0;i<plist.length;i++)
+    {
+        document.write("<img src='images/"+plist[i]+"' class='pic' >")
+    }
+    document.title="Ready"
+    </script>
+</body>
+</html>
