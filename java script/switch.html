@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body
+    {
+        text-align:center;
+
+    }
+    .pic
+    {
+        width:100%;
+        height:300px;
+
+    }
+    #mes
+    {
+        font-size:50px;
+        font-family: Arial black;
+        position:relative;
+        top:-100px;
+        color:white;
+
+    }
+</style>
+<body>
+    <h1>Image of the day </h1>
+    <img id="mypic" scr="images/p1.jpg" class="pic">
+    <div id="mes">images</div>
+
+
+    <script>
+        /*working with switch case*/
+        var p = document.getElementById("mypic")
+        var m = document.getElementById("mes")
+        
+        var d = new Date()
+        var today = d.getDate()
+        alert(today)
+
+        switch(today)
+        {
+            case 1:
+                m.innerHTML ="Today is Monday"
+                p.src="images/p1.jpg"
+                break;
+                case 2:
+                    p.src="images/p2.jpg"
+                    m.innerHTML="Today is Tuesday"
+                    break;
+                    case 3:
+                        p.src="images/p3.jpg"
+                        m.innerHTML="Today is Wednesday"
+                        break;
+                        case 4:
+                            m.innerHTML="Today is Thurday"
+                            p.src="images/p4.jpg"
+                            break;
+                            case 5:
+                            m.innerHTML ="Today is Friday"
+                p.src="images/p5.jpg"
+                break;
+                case 2:
+                    p.src="images/p6.jpg"
+                    m.innerHTML="Today is Saturday"
+                    break;
+                    case 3:
+                        p.src="images/p7.jpg"
+                        m.innerHTML="Today is Sunday"
+                        break;
+
+        }
+        
+        document.title="REady"
+    </script>
+</body>
+</html>
