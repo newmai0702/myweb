@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .pic
+    {
+        width:20%;
+        position:absolute;
+        top:0px;
+        left:0px;
+
+    }
+</style>
+<img id="bird" src="images/gif1.gif" class="pic">
+<body>
+    <script>
+        var bird = document.getElementById("bird")
+        var k=t=L=0
+        var s = 5
+
+        function myaction(e)
+        {
+            //alert(e.keyCode)
+            /*
+            left:37
+            right:39;
+            up:38;
+            down:40;
+            space:32;
+            */
+
+            k = e.keyCode
+
+            switch(k)
+            {
+                case 39:
+                    L=L+S
+                    if(L>=0)
+             {
+                bird.style.left = L+"px"
+                bird.style.transform="rotate(0deg)"
+                document.title = L
+             }
+
+             break;
+             case 37:
+                bird.style.transform="rotate(180deg)"
+                bird.style.transform="rotateY(180deg)"
+                L=L-S
+                if(L<window.innerWidth)
+             {
+                bird.style.left = L+"px"  
+                document.title = L 
+             }
+             break;
+             case 40:
+                L=L+S
+                if(L<window.innerHeight)
+             {
+                bird.style.top = L+"px"  
+                document.title = L 
+             }
+             break;
+             case 38:
+                
+                if(L>0)
+             {
+                L=L+S
+                bird.style.top = L+"px"  
+                document.title = L 
+             }
+             break;
+             //for speed
+             case 32:
+                s=s+1
+                document.title = s
+                break;
+            }
+
+
+
+
+
+        }
+        document.addEventListener("keydown",myaction)
+
+    </script>
+</body>
+</html>
