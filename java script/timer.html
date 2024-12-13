@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="f1()">open window</button>
+    <button onclick="f1()">open blank window</button>
+    <script>
+        var uname = new String("Hello Dear Ravi")
+
+        let mybrowsername = navigation .appName;
+        //alert(mybrowsername)
+        let n = navigator .appCodeName;
+        alert(n)
+
+        document.write("<h1> how to create window </h1>")
+        function f1()
+        {
+            open("banner.html","win1")
+        }
+        function f2()
+        {
+            var w = open("","win2","width=200 height=200 top=100 left=100")
+            w.document.write("<img style='width:60% src='images/gif1.gif>")
+            w.document.write("<h1> A jumping chick</h1>")
+            w.document.body.style.background="yellow"
+        }
+
+
+
+
+    </script>
+</body>
+</html>
