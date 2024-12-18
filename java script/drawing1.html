@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #mycan
+    {
+        //background:gray;
+    }
+</style>
+<body>
+    <canvas id="mycan" width="1600" height="800"></canvas>
+    <script>
+        var can = document.getElementById("mycan")
+        var c = can.getContext("2d")
+        c.beginPath()
+        c.arc(200,230,120,0,2*Math.PI)
+        //alert(2*Math.PI)
+        c.fillStyle="blue"
+        c.font="50px arial";
+        c.fillText("Hello World",100,80);
+        c.strokeStyle="green";
+        c.lineWidth="20"
+        c.fill()
+        c.stroke();
+        //c.rect(400,100,200,200)
+        //c.stroke();
+        //c.fillStyle="red"
+        //c.fill()
+        c.fillrect(400,100,200,200)
+    </script>
+
+    
+</body>
+</html>

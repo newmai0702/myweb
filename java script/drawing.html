@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #mycan
+    {
+        //background:gray;
+    }
+</style>
+<body>
+    <canvas id="mycan" width="1600" height="800"></canvas>
+    </body>
+    <script>
+        var can = document.getElementById("mycan")
+        var c = can.getContext("2d")
+        var drawcolor ="red"
+        var brushes ="2"
+        var r,g,b
+
+        function startdraw(e)
+        {
+            document.title ="x ="+e.pageX+" y = "+e.pageY
+            c.beginPath()
+            c.arc(e.pageX,e.pageY,brushsize,0,2*Math.PI)
+            c.fillStyle=drawcolor
+            c.fill()
+            
+        }
+        function f1(e)
+        {
+            document.title = e.Keycode
+            //s
+            if(e.KeyCode ==83)
+        {
+            brushsize++
+            document.title = brushsize
+        }
+        //68 = D
+        
+        }
+
+    </script>
+</body>
+</html>
