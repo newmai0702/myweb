@@ -9,39 +9,96 @@
     #mycan
     {
         //background:gray;
+        position:relative;
+        top:50px;
+
+    }
+    #info
+    {
+        width:100px;
+        box-shadow:10px 10px 10px gray;
+        position:fixed;
+        z-index:24;
     }
 </style>
 <body>
+    <div id="info">keys: - e = for erase mode , g = drawmode on/off, spacebar:= clear screen, c = color , s = brushSize + , d = brushSize -- </div>
     <canvas id="mycan" width="1600" height="800"></canvas>
     </body>
     <script>
         var can = document.getElementById("mycan")
-        var c = can.getContext("2d")
+        var drawmode  = false
+        var c = can.getContext("2d");
         var drawcolor ="red"
         var brushes ="2"
         var r,g,b
 
         function startdraw(e)
         {
-            document.title ="x ="+e.pageX+" y = "+e.pageY
+            document.title = "X ="+e.pageX+" y = "+e.pageY
+            if(drawmode)
+          {
             c.beginPath()
-            c.arc(e.pageX,e.pageY,brushsize,0,2*Math.PI)
+            c.arc(e.pageX-10,e.pageY-60,brushsize,0,2*Math.PI)
             c.fillStyle=drawcolor
             c.fill()
+          }
             
         }
         function f1(e)
         {
             document.title = e.Keycode
+
+            // e = For erase
+            if(e.KeyCode ==69)
+         {
+             drawcolor="white"
+         }
+
+         // g = drawmode on/off
+         if(e.KeyCode ==71)
+         {
+            if(drawmode)
+         {
+            drawmode = false
+         }
+         else
+         {
+            drawmode = true
+         }
+         document.title = drawmode
+         }
             //s
-            if(e.KeyCode ==83)
+            if(e.KeyCode == 83)
         {
             brushsize++
             document.title = brushsize
         }
         //68 = D
+        if(e.KeyCode == 68)
+        {
+            brushsize--
+            document.title = brushsize
+        }
+        // spacebar
+        if(e.KeyCode ==32)
+        {
+
+            c.clearReact(0,0,1500,900)
+        }
+        // 67 = c
+        if(e.KeyCode ==67)
+        {
+            r = Math.round(Math.random()*255)
+            g = Math.round(Math.random()*255)
+            b = Math.round(Math.random()*255)
+
+            drawcolor='rgb(${r},${g},${b})'
+        }
         
         }
+        document.addEventListener("mousemove",startdraw)
+        document.addEventListener("keydown",f1)
 
     </script>
 </body>
